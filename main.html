@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/JQuery/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/JQuery/jquery-3.4.1.min.js"></script>
+  <script src="assets/JQuery/jquery-ui.min.js"></script>
+  <script src="code.js"></script>
+  <title>מכת חום</title>
+</head>
+
+<body>
+  <!-- general -->
+  <div id="opacity-div"></div>
+  <div id="main-div">
+    <div id="title" class="text"></div>
+    <div id="text" class="text"></div>
+    <!-- opening screen -->
+    <div id="opening-screen" class="pages-content hide-previous-button hide-next-button">
+      <img id="logo" src="assets/media/logos/tilblack.svg">
+      <img id="start" class="buttons" src="assets/media/buttons/start.png">
+      <!-- <button id="start" class="buttons">בואו נתחיל!</button> -->
+      <button id="about" class="buttons">אודות</button>
+      <img id="pointing-spongebob" src="assets/media/spongebob/spongebob_explaining.png">
+    </div>
+    <!-- about screen -->
+    <div id="about-screen" class="pages-content show-previous-button">
+      <img id="logo1" src="assets/media/logos/tilblack.svg">
+    </div>
+    <!-- first page screen -->
+    <div id="first-page" class="pages-content hide-next-button show-previous-button">
+      <div id="krabby-patty-flexbox">
+        <div>
+          <img id="rare" class="krabby-patty" src="assets/media/krabby_patty/rare.png" alt="רר">
+          <div class="burger-type">רר</div>
+        </div>
+        <div>
+          <img id="medium" class="krabby-patty" src="assets/media/krabby_patty/medium.png" alt="מדיום">
+          <div class="burger-type">מדיום</div>
+        </div>
+        <div>
+          <img id="well" class="krabby-patty" src="assets/media/krabby_patty/well.png" alt="וול">
+          <div class="burger-type">וול</div>
+        </div>
+        <div>
+          <img id="well_done" class="krabby-patty" src="assets/media/krabby_patty/well_done.png" alt="וול-דאן">
+          <div class="burger-type">וול-דאן</div>
+        </div>
+        <div>
+          <img id="squid" class="krabby-patty" src="assets/media/secondary_characters/squid.png">
+          <div class="burger-type">אני בכלל לא<br> אוכל המבורגר...</div>
+        </div>
+      </div>
+    </div>
+    <!-- second page screen -->
+    <div id="second-page" class="pages-content show-next-button">
+      <div id="second-page-bold-text" class="text specific-text">אף אחד לא אוהב המבורגר שרוף, נכון?</div>
+      <img id="burned-krabby-patty" src="assets/media/krabby_patty/burned.png">
+      <img id="burned-hover-krabby-patty" src="assets/media/krabby_patty/disgusting.png">
+    </div>
+    <!-- third page screen -->
+    <div id="third-page" class="pages-content show-previous-button show-next-button update-nevigation-bar show-div original-src">
+      <div id="third-page-bold-text" class="text specific-text">המוח מתבשל יותר מידי</div>
+      <img id="page-three-speech-bubble" src="assets/media/speech_bubble/third_page_1.png">
+      <img id="no-brain" src="assets/media/secondary_characters/patrick_no_brain.png">
+    </div>
+    <!-- forth page screen -->
+    <div id="forth-page" class="pages-content show-next-button">
+      <img id="spongebob-looking-up" src="assets/media/spongebob/spongebob_looking_up.png">
+      <img id="sandy" src="assets/media/secondary_characters/sandy.png">
+      <img id="water-helmet" src="assets/media/objects/water_helmet.png">
+    </div>
+    <!-- fifth page screen -->
+    <div id="fifth-page" class="pages-content hide-next-button">
+      <div id="slider"></div>
+      <img id="slider-thermometer" src="assets/media/objects/slider3.png">
+      <img id="switch-faces-sponge" src="assets/media/spongebob/worried_sponge.png">
+      <img id="page-five-speech-bubble" src="assets/media/speech_bubble/38_feedback.png">
+      <img id="check" class="buttons" src="assets/media/buttons/check.png">
+      <!-- <button id="check" class="buttons">בדיקה</button> -->
+    </div>
+    <!-- sixth page screen -->
+    <div id="sixth-page" class="pages-content update-nevigation-bar show-previous-button show-next-button show-div original-src">
+      <img id="red-sponge" src="assets/media/spongebob/red_sponge.png">
+    </div>
+    <!-- seventh page screen -->
+    <div id="seventh-page" class="pages-content hide-next-button">
+      <div id="containment-div"></div>
+      <img id="worried-sponge" class="draggable" src="assets/media/spongebob/worried_sponge_little.png">
+      <div id="droppable"></div>
+      <img id="pineapple" src="assets/media/objects/pineapple.png">
+      <img id="shadow" src="assets/media/objects/shadow.png">
+      <img id="page-seven-speech-bubble" src="assets/media/speech_bubble/seven_page.png">
+      <img class="stages" src="assets/media/logos/symbol_1.png">
+    </div>
+    <!-- eight page screen -->
+    <div id="eight-page" class="pages-content update-nevigation-bar hide-next-button show-previous-button show-div original-src">
+      <div id="containment-div-pants"></div>
+      <img id="naked-sponge" src="assets/media/spongebob/dressed_sponge.png">
+      <img id="squarepants" class="draggable" src="assets/media/objects/squarepants.png">
+      <div id="drop-pants" class="drop-to">גררו לכאן!</div>
+      <img id="page-eight-speech-bubble" src="assets/media/speech_bubble/eight_page.png">
+      <img class="stages" src="assets/media/logos/symbol_2.png">
+    </div>
+    <!-- ninth page screen -->
+    <div id="ninth-page" class="pages-content update-nevigation-bar  show-previous-button hide-next-button show-div original-src">
+      <img id="mud-1" class="stain" src="assets/media/mud/mud_1.png">
+      <img id="mud-2" class="stain" src="assets/media/mud/mud_2.png">
+      <img id="mud-3" class="stain" src="assets/media/mud/mud_3.png">
+      <img id="mud-4" class="stain" src="assets/media/mud/mud_4.png">
+      <img id="mud-5" class="stain" src="assets/media/mud/mud_5.png">
+      <img id="mud-6" class="stain" src="assets/media/mud/mud_6.png">
+      <img id="mud-7" class="stain" src="assets/media/mud/mud_1.png">
+      <img id="mud-8" class="stain" src="assets/media/mud/mud_2.png">
+      <img id="mud-9" class="stain" src="assets/media/mud/mud_3.png">
+      <img id="mud-10" class="stain" src="assets/media/mud/mud_4.png">
+      <img id="mud-11" class="stain" src="assets/media/mud/mud_5.png">
+      <img id="mud-12" class="stain" src="assets/media/mud/mud_6.png">
+      <img id="mud-13" class="stain" src="assets/media/mud/mud_1.png">
+      <img id="mud-14" class="stain" src="assets/media/mud/mud_2.png">
+      <img id="mud-15" class="stain" src="assets/media/mud/mud_3.png">
+      <img id="mud-16" class="stain" src="assets/media/mud/mud_4.png">
+      <img id="mud-17" class="stain" src="assets/media/mud/mud_5.png">
+      <img id="mud-18" class="stain" src="assets/media/mud/mud_6.png">
+      <img id="mud-19" class="stain" src="assets/media/mud/mud_1.png">
+      <img id="mud-20" class="stain" src="assets/media/mud/mud_2.png">
+      <img id="mud-21" class="stain" src="assets/media/mud/mud_3.png">
+      <img id="mud-22" class="stain" src="assets/media/mud/mud_4.png">
+      <img id="mud-23" class="stain" src="assets/media/mud/mud_5.png">
+      <img id="mud-24" class="stain" src="assets/media/mud/mud_6.png">
+      <img id="mud-25" class="stain" src="assets/media/secondary_characters/smashed_plankton.png">
+      <img id="clean-sponge" class="draggable" src="assets/media/spongebob/little-naked-sponge.png">
+      <img id="bucket" src="assets/media/objects/bucket.png">
+      <div id="first-bucket-container"></div>
+      <img id="page-nine-speech-bubble" src="assets/media/speech_bubble/ninth_page.png">
+      <img class="stages" src="assets/media/logos/symbol_3.png">
+      <!-- <div id="second-bucket-container"></div> -->
+    </div>
+    <!-- tenth page screen -->
+    <div id="tenth-page" class="pages-content hide-next-button">
+      <img class="stages" src="assets/media/logos/symbol_3.png">
+      <div id="sock-flexbox">
+        <div id="Sock0" class="sock">להיתקע עם הזרת ברהיט</div>
+        <div id="Sock1" class="sock">לדרוך על לגו</div>
+        <div id="Sock2" class="sock">גרביים רטובים</div>
+        <div id="Sock3" class="sock">כשאין ווי-פיי</div>
+        <div id="Sock4" class="sock">קשר בחוט של האוזניות</div>
+        <div id="Sock5" class="sock">כשנגמרת הסוללה באמצע השיחה</div>
+        <img id="page-ten-speech-bubble" src="assets/media/speech_bubble/tenth_page.png">
+        <img id="lego" src="assets/media/objects/lego.png">
+        <img id="wifi" src="assets/media/objects/wifi.png">
+      </div>
+    </div>
+    <!-- eleventh page screen -->
+    <div id="eleventh-page" class="pages-content update-nevigation-bar show-previous-button show-next-button show-div original-src">
+      <img id="kelp-shake" src="assets/media/objects/kelp_shake.png">
+      <img class="stages" src="assets/media/logos/symbol_4.png">
+    </div>
+    <!-- twelfth page screen -->
+    <div id="twelfth-page" class="pages-content update-nevigation-bar show-previous-button show-next-button show-div original-src">
+      <img id="cool-spongebob" src="assets/media/spongebob/happy_sponge.png">
+      <img id="page-twelve-speech-bubble" src="assets/media/speech_bubble/twelfth_page.png">
+    </div>
+    <!-- thirteenth page screen -->
+    <div id="thirteenth-page" class="pages-content show-next-button show-div original-src">
+      <img id="page-thirteen-speech-bubble" src="assets/media/speech_bubble/thirteenth_page.png">
+      <img id="mr-krab" src="assets/media/secondary_characters/mr_krab.png">
+    </div>
+    <!-- fifteenth page screen -->
+    <div id="fifteenth-page" class="pages-content show-next-button show-div">
+      <img id="target" src="assets/media/objects/target.png">
+    </div>
+    <!-- seventeenth page screen -->
+    <div id="seventeenth-page" class="pages-content show-next-button show-div">
+      <img id="poor-plankton" src="assets/media/secondary_characters/poor-plankton.png">
+      <img id="retry" class="buttons" src="assets/media/buttons/retry.png">
+      <img id="page-seventeen-speech-bubble" src="assets/media/speech_bubble/seventeenth_page.png">
+    </div>
+    <!-- seventeenth page second option screen -->
+    <div id="seventeenth-page-alternative" class="pages-content show-next-button show-div">
+      <img id="miss-puff" src="assets/media/secondary_characters/miss_puff.png">
+      <img id="retry-2" class="buttons" src="assets/media/buttons/retry.png">
+      <img id="page-seventeen-speech-bubble-2" src="assets/media/speech_bubble/seventeenth_page.png">
+    </div>
+    <!-- eighteenth page screen -->
+    <div id="eighteenth-page" class="pages-content show-previous-button">
+      <img id="balls" src="assets/media/objects/balls.png">
+    </div>
+    <!-- nineteenth page screen -->
+    <div id="nineteenth-page" class="pages-content update-nevigation-bar">
+      <img id="summing" src="assets/media/objects/summing.png">
+      <div id="remember">וחשוב לזכור- לא לתת לו כדור להורדת חום!</div>
+    </div>
+    <!-- twentieth page screen -->
+    <div id="twentieth-page" class="pages-content show-next-button update-nevigation-bar">
+      <img id="passed-out-patrick" src="assets/media/secondary_characters/unconscious-patrick.png">
+      <img id="page-twenty-speech-bubble" src="assets/media/speech_bubble/twentieth_page.png">
+    </div>
+    <!-- twenty first page screen -->
+    <div id="twenty-first-page" class="pages-content hide-previous-button hide-next-button">
+      <div id="environment-flexbox">
+        <img id="Environment0" class="environments" src="assets/media/backgrounds/snow.png">
+        <img id="Environment1" class="environments" src="assets/media/backgrounds/desert.png">
+        <img id="Environment2" class="environments" src="assets/media/backgrounds/squidward's_house.png">
+      </div>
+      <div id="environment-text-flexbox">
+        <div class="environment-text">שלג</div>
+        <div class="environment-text">מדבר</div>
+        <div class="environment-text">הבית של סקווידוויד</div>
+      </div>
+      <img id="twenty-first-speech-bubble-0" class="twenty-first-speech-bubble" src="assets/media/speech_bubble/twenty_first_page_0.png">
+      <img id="twenty-first-speech-bubble-1" class="twenty-first-speech-bubble" src="assets/media/speech_bubble/twenty_first_page_1.png">
+      <img id="unconscious-patrick" class="draggable" src="assets/media/secondary_characters/unconscious-patrick.png">
+    </div>
+    <!-- twenty second page screen -->
+    <div id="twenty-second-page" class="pages-content">
+      <div id="cards-flexbox">
+        <img id="Card0" class="on-hover cards" src="assets/media/objects/kraby-patty-card.png">
+        <img id="Card1" class="on-hover cards" src="assets/media/objects/iv-card.png">
+        <img id="Card2" class="on-hover cards" src="assets/media/objects/drug-card.png">
+        <img id="Card3" class="on-hover cards" src="assets/media/objects/hair-dryer-card.png">
+        <img id="Card4" class="on-hover cards" src="assets/media/objects/bucket-card.png">
+      </div>
+      <div id="cards-text-flexbox">
+        <div class="cards-text">מזון</div>
+        <div class="cards-text">עירוי</div>
+        <div class="cards-text">כדור להורדת חום</div>
+        <div class="cards-text">מייבש שיער</div>
+        <div class="cards-text">מים</div>
+      </div>
+      <img id="twenty-second-speech-bubble-0" class="twenty-second-speech-bubble" src="assets/media/speech_bubble/twenty_second_page_0.png">
+      <img id="twenty-second-speech-bubble-2" class="twenty-second-speech-bubble" src="assets/media/speech_bubble/twenty_second_page_2.png">
+      <img id="twenty-second-speech-bubble-3" class="twenty-second-speech-bubble" src="assets/media/speech_bubble/twenty_second_page_3.png">
+    </div>
+    <!-- twenty fourth screen -->
+    <div id="twenty-fourth-page" class="pages-content">
+      <img id="awake-patrick" src="assets/media/secondary_characters/patrick_no_brain.png">
+      <img id="retry-test" class="buttons on-hover" src="assets/media/buttons/try_again_test.png">
+      <img id="restart" class="buttons on-hover" src="assets/media/buttons/start_over.png">
+    </div>
+
+    <!-- twenty third page screen -->
+    <div id="twenty-third-page" class="pages-content">
+      <div id="containment-div-pants-patrick"></div>
+      <img id="patricks-pants" class="draggable" src="assets/media/objects/patrick_pants.png">
+      <div id="tool-box" class="drop-to"></div>
+      <img id="draggable-iv" class="draggable" src="assets/media/objects/iv.png">
+      <img id="draggable-bucket" class="draggable" src="assets/media/objects/bucket.png">
+      <div id="drop-bucket" class="drop-to">גררו את הדלי לכאן!</div>
+      <div id="drop-patricks-pants" class="drop-to">גררו את המכנסיים לכאן!</div>
+      <img id="twenty-third-speech-bubble-1" class="twenty-third-speech-bubble" src="assets/media/speech_bubble/twenty_third_page.png">
+      <img id="twenty-third-speech-bubble-2" class="twenty-third-speech-bubble" src="assets/media/speech_bubble/twenty_third_page.png">
+      <img id="water-fall" src="assets/media/objects/waterfall.svg">
+      <div id="hide-water-fall"></div>
+      <img id="asleep-patrick" src="assets/media/secondary_characters/unconscious-patrick.png">
+    </div>
+  </div>
+
+  <!-- fourteenth page screen -->
+  <div id="fourteenth-page" class="pages-content hide-next-button hide-div">
+    <img id="hiding-plankton" src="assets/media/secondary_characters/hiding_plankton.png">
+    <img id="chimney" class="on-hover" src="assets/media/objects/chimney.png">
+    <img id="hiding-plankton-background" src="assets/media/objects/background-hiding-plankton.png">
+    <img id="page-fourteen-speech-bubble" src="assets/media/speech_bubble/fourteenth_page.png">
+  </div>
+  <!-- sixteenth page screen -->
+  <div id="sixteenth-page" class="pages-content hide-next-button hide-div">
+    <img id="plankton-run" src="assets/media/secondary_characters/plankton_run_three.png">
+    <img id="bullet-1" class="bullets" src="assets/media/objects/bullet.png">
+    <img id="bullet-2" class="bullets" src="assets/media/objects/bullet.png">
+    <img id="bullet-3" class="bullets" src="assets/media/objects/bullet.png">
+  </div>
+  <img id="nevigation-bar" src="assets/media/nevigation_bar/page3.png">
+  <div id="nevigation-bar-text-flexbox">
+    <div id="page3" class="nevigation-bar-text">הגדרה</div>
+    <div id="page6" class="nevigation-bar-text">צל</div>
+    <div id="page8" class="nevigation-bar-text">הסרת שכבות</div>
+    <div id="page9" class="nevigation-bar-text">הרטבת הנפגע</div>
+    <div id="page11" class="nevigation-bar-text">החזרת נוזלים</div>
+    <div id="page12" class="nevigation-bar-text">דגשים</div>
+    <div id="page19" class="nevigation-bar-text">סיכום</div>
+  </div>
+  <img id="previous" class="buttons move-buttons" src="assets/media/buttons/next.png">
+  <img id="next" class="buttons move-buttons" src="assets/media/buttons/next.png">
+  <div id="timer">01:30</div>
+</body>
+
+</html>

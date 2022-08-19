@@ -1,0 +1,1260 @@
+/* general */
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  direction: rtl;
+  text-align: center;
+  background-image: url("assets/media/backgrounds/new-background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  user-select: none;
+}
+
+button {
+  font-family: calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  direction: rtl;
+  text-align: center;
+  background-color: rgb(114, 171, 228);
+  border-style: solid;
+  border-right-color: rgb(98, 131, 163);
+  border-bottom-color: rgb(98, 131, 163);
+  border-top-color: rgb(178, 212, 247);
+  border-left-color: rgb(178, 212, 247);
+  font-weight: 800;
+}
+
+.buttons,
+.draggable,
+.on-hover {
+  cursor: pointer;
+}
+
+.move-buttons {
+  height: 15vh;
+  width: 7.5vw;
+  position: absolute;
+  top: 78vh;
+  display: none;
+}
+
+#previous {
+  transform: scaleX(-1);
+  right: 7.5vw;
+}
+
+#next {
+  right: 84.5vw;
+}
+
+#opacity-div {
+  position: absolute;
+  z-index: -2;
+  top: 0vh;
+  right: 0vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+}
+
+#main-div {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(243, 232, 196);
+  width: 90vw;
+  height: 90vh;
+  border-radius: 5vh;
+  display: none;
+}
+
+.text {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+#title {
+  top: 14.1vh;
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+#text {
+  top: 15vh;
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+#big-num {
+  font-size: 3.8vw;
+  font-weight: 800;
+  display: inline;
+}
+
+.pages-content {
+  display: none;
+}
+
+#nevigation-bar {
+  height: 15vh;
+  width: 26vw;
+  position: absolute;
+  right: 69vw;
+  display: none;
+}
+
+.nevigation-bar-text {
+  display: inline-block;
+  font-size: 1vw;
+  font-weight: 800;
+  position: relative;
+  width: 3.1vw;
+  top: 12vh;
+  left: 8.5vw;
+}
+
+#page6 {
+  width: 2vw;
+}
+
+#page13 {
+  width: 2.7vw;
+}
+
+#nevigation-bar-text-flexbox {
+  direction: ltr;
+  align-items: flex-start;
+  display: none;
+}
+
+.correct {
+  box-shadow: 0 0 0 4px rgb(30, 170, 30) !important;
+}
+
+.incorrect {
+  box-shadow: 0 0 0 4px red !important;
+}
+
+#timer {
+  position: absolute;
+  top: 9vh;
+  right: 9vw;
+  font-weight: 800;
+  font-size: 4vw;
+  display: none;
+}
+
+/* opening screen */
+
+#start {
+  position: absolute;
+  display: block;
+  top: 43vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  height: 20vh;
+  width: 26.5vw;
+  border-radius: 3vh;
+  font-size: 3.8vw;
+  border-width: 1vh 0.5vw;
+}
+
+#about {
+  position: absolute;
+  display: block;
+  top: 57vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 5vh;
+  width: 5vw;
+  margin: auto;
+  border-radius: 2vh;
+  background-color: rgb(234, 236, 238);
+  border-color: transparent;
+  font-size: 1.5vw;
+}
+
+#pointing-spongebob {
+  position: absolute;
+  height: 60vh;
+  width: 30vw;
+  top: 50vh;
+  right: 50vw;
+}
+
+#logo,
+#logo1 {
+  position: absolute;
+  height: 12vh;
+  width: 8vw;
+  top: 3vh;
+  right: 0.5vw;
+}
+
+#logo {
+  display: none;
+}
+
+.stages {
+  position: absolute;
+  height: 20vh;
+  width: 9.5vw;
+  top: 1vh;
+  right: 3vw;
+}
+
+/* first page */
+
+#krabby-patty-flexbox {
+  position: relative;
+  margin: auto;
+  top: 15vh;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.krabby-patty {
+  margin: 0;
+  height: 25vh;
+  width: 12vw;
+  cursor: pointer;
+  margin: 1vw;
+  position: relative;
+  z-index: 0;
+}
+
+#medium {
+  margin-right: 2vw;
+}
+
+#well {
+  height: 28vh;
+  width: 14vw;
+  margin: 0vw;
+  margin-bottom: 1.2vh;
+}
+
+.burger-type {
+  font-weight: 800;
+  font-size: 2.5vw;
+  display: inline-block;
+}
+
+/* second page */
+
+#second-page-bold-text {
+  top: 14vh;
+}
+
+#burned-krabby-patty {
+  top: 40.2vh;
+  height: 50vh;
+  width: 35vw;
+  right: 20vw;
+  position: absolute;
+  cursor: pointer;
+}
+
+#burned-hover-krabby-patty {
+  position: absolute;
+  top: 28.5vh;
+  height: 43vh;
+  width: 26vw;
+  right: 45vw;
+  display: none;
+}
+
+.specific-text {
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+/* third page */
+
+#third-page-bold-text {
+  top: 14vh;
+}
+
+#page-three-speech-bubble {
+  height: 12vh;
+  width: 28vw;
+  position: absolute;
+  top: 3vh;
+  right: 37vw;
+}
+
+/* fourth page */
+
+#spongebob-looking-up {
+  position: absolute;
+  top: 62vh;
+  height: 45vh;
+  width: 18vw;
+  right: 55vw;
+}
+
+#sandy {
+  position: absolute;
+  top: 38.5vh;
+  height: 60vh;
+  width: 23vw;
+  right: 12vw;
+}
+
+#water-helmet {
+  position: absolute;
+  top: -11vh;
+  height: 37vh;
+  width: 20vw;
+  right: 18vw;
+}
+
+#no-brain,
+#awake-patrick {
+  position: absolute;
+  height: 60vh;
+  width: 25vw;
+  right: 35vw;
+  top: 50vh;
+}
+
+/* fifth page */
+
+#slider {
+  height: 35vh;
+  width: 0.5vw;
+  margin-right: 0.1vw;
+  position: absolute;
+  right: 56.7vw;
+  z-index: 1;
+  top: 33.1vh;
+  border-bottom-color: red;
+}
+
+.ui-slider .ui-slider-handle {
+  width: 0.9vw;
+  height: 0.9vh;
+  cursor: pointer;
+  outline: 0 none !important;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+  left: -0.55vh;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+  margin-bottom: 0.1vh;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  background: red;
+  border-color: transparent;
+  font-weight: normal;
+}
+
+#slider .ui-slider-range {
+  background: red !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#slider .ui-slider-handle {
+  border-color: red !important;
+}
+
+#slider-thermometer {
+  height: 50vh;
+  width: 10.5vw;
+  margin-right: 0.1vw;
+  position: absolute;
+  right: 52vw;
+  top: 25vh;
+}
+
+#check,
+#retry,
+#retry-2 {
+  width: 10vw;
+  height: 10vh;
+  border-radius: 0.5vw;
+  font-size: 2vw;
+  position: relative;
+  top: 70vh;
+}
+
+#switch-faces-sponge {
+  position: absolute;
+  height: 48vh;
+  width: 17vw;
+  right: 25vw;
+  top: 25vh;
+}
+
+#page-five-speech-bubble {
+  display: none;
+  height: 15vh;
+  position: absolute;
+  top: 52vh;
+  right: 64vw;
+  width: 18vw;
+}
+
+/* sixth page */
+
+#red-sponge {
+  position: absolute;
+  height: 50vh;
+  width: 18vw;
+  top: 27vh;
+  right: 37vw;
+}
+
+/* seventh page */
+
+#worried-sponge {
+  height: 12.5vh;
+  width: 5vw;
+  position: absolute;
+  z-index: 3;
+  left: 17vw;
+  top: 70vh;
+}
+
+#pineapple {
+  height: 45vh;
+  width: 15vw;
+  position: absolute;
+  right: 17vw;
+  top: 42vh;
+  z-index: 1;
+}
+
+#shadow {
+  width: 14.5vw;
+  height: 6vh;
+  position: absolute;
+  right: 8.7vw;
+  top: 80vh;
+}
+
+#droppable {
+  background-color: transparent;
+  height: 16vh;
+  right: 10vw;
+  width: 10vw;
+  position: absolute;
+  top: 69vh;
+  z-index: 2;
+}
+
+#containment-div,
+#containment-div-pants,
+#containment-div-pants-patrick {
+  position: absolute;
+  top: 45vh;
+  right: 9vw;
+  border-radius: 2vw;
+  height: 45vh;
+  background-color: transparent;
+  width: 81vw;
+}
+
+#page-seven-speech-bubble {
+  height: 19vh;
+  position: absolute;
+  top: 43vh;
+  right: 61vw;
+  width: 18vw;
+}
+
+/* eight page */
+
+#squarepants {
+  position: absolute;
+  opacity: 0;
+  height: 13vh;
+  width: 7.4vw;
+  top: 68vh;
+  left: 59.9vw;
+  z-index: 1;
+}
+
+#naked-sponge {
+  position: absolute;
+  height: 32vh;
+  width: 13vw;
+  top: 50vh;
+  right: 20vw;
+}
+
+.drop-to {
+  width: 10vw;
+  background-color: rgb(194, 188, 188);
+  color: white;
+  font-size: 2vw;
+  font-weight: 600;
+  border-radius: 2vw;
+  border-style: solid;
+  border-width: 0.2vw;
+  border-color: dimgray;
+  position: absolute;
+}
+
+#drop-pants {
+  top: 57vh;
+  right: 57.6vw;
+  height: 2vh;
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+}
+
+#page-eight-speech-bubble,
+#page-nine-speech-bubble {
+  height: 19vh;
+  position: absolute;
+  top: 35vh;
+  right: 50vw;
+  width: 18vw;
+}
+
+/* ninth page */
+
+.stain {
+  position: absolute;
+}
+
+#mud-1 {
+  right: 32vw;
+  top: 15vh;
+  height: 12vh;
+  width: 8vw;
+}
+
+#mud-2 {
+  right: 10vw;
+  top: 12vh;
+  height: 25vh;
+  width: 15vw;
+}
+
+#mud-3 {
+  right: 20vw;
+  top: 18vh;
+  height: 27vh;
+  width: 11vw;
+}
+
+#mud-4 {
+  right: 18vw;
+  top: 23vh;
+  height: 17vh;
+  width: 11vw;
+}
+
+#mud-5 {
+  right: 25vw;
+  top: 23vh;
+  height: 17vh;
+  width: 9.5vw;
+}
+
+#mud-6 {
+  right: 33vw;
+  top: 23vh;
+  height: 17vh;
+  width: 8vw;
+}
+
+#mud-7 {
+  right: 54vw;
+  top: 17vh;
+  height: 17vh;
+  width: 8vw;
+}
+
+#mud-8 {
+  right: 54vw;
+  top: 15vh;
+  height: 27vh;
+  width: 16vw;
+  transform: rotate(40deg);
+}
+
+#mud-9 {
+  right: 50vw;
+  top: 12vh;
+  height: 20vh;
+  width: 10vw;
+  transform: rotate(40deg);
+}
+
+#mud-10 {
+  right: 50vw;
+  top: 12vh;
+  height: 17vh;
+  width: 8vw;
+}
+
+#mud-11 {
+  right: 42vw;
+  top: 12vh;
+  height: 17vh;
+  width: 8vw;
+}
+
+#mud-12 {
+  right: 40vw;
+  top: 12vh;
+  height: 20vh;
+  width: 7vw;
+  transform: scaleX(-1) rotate(40deg);
+}
+
+#mud-13 {
+  right: 44vw;
+  top: 12vh;
+  height: 17vh;
+  width: 8vw;
+}
+
+#mud-14 {
+  right: 45vw;
+  top: 19vh;
+  height: 25vh;
+  width: 12vw;
+  transform: scaleX(-1) rotate(60deg);
+}
+
+#mud-15 {
+  right: 38.5vw;
+  top: 17vh;
+  height: 30vh;
+  width: 7vw;
+  transform: scaleX(-1) rotate(60deg);
+}
+
+#mud-16 {
+  right: 40.5vw;
+  top: 17vh;
+  height: 30vh;
+  width: 7vw;
+  transform: scaleX(-1) rotate(60deg);
+}
+
+#mud-17 {
+  right: 50.5vw;
+  top: 17vh;
+  height: 30vh;
+  width: 7vw;
+  transform: scaleX(-1) rotate(60deg);
+}
+
+#mud-18 {
+  right: 54.5vw;
+  top: 19vh;
+  height: 25vh;
+  width: 7vw;
+  transform: scaleX(-1) rotate(60deg);
+}
+
+#mud-19 {
+  right: 70.5vw;
+  top: 19vh;
+  height: 25vh;
+  width: 7vw;
+  transform: scaleX(-1) rotate(-20deg);
+}
+
+#mud-20 {
+  right: 62.5vw;
+  top: 9vh;
+  height: 25vh;
+  width: 20vw;
+  transform: scaleX(-1) rotate(-20deg);
+}
+
+#mud-21 {
+  right: 58.5vw;
+  top: 20vh;
+  height: 25vh;
+  width: 10vw;
+  transform: scaleX(-1) rotate(-50deg);
+}
+
+#mud-22 {
+  right: 25vw;
+  top: 11vh;
+  height: 25vh;
+  width: 10vw;
+  transform: scaleX(-1) rotate(-50deg);
+}
+
+#mud-23 {
+  right: 14vw;
+  top: 18vh;
+  height: 25vh;
+  width: 10vw;
+  transform: scaleX(-1) rotate(-50deg);
+}
+
+#mud-24 {
+  right: 45vw;
+  top: 18vh;
+  height: 25vh;
+  width: 10vw;
+  transform: scaleX(-1) rotate(-50deg);
+}
+
+#mud-25 {
+  right: 28vw;
+  top: 18vh;
+  height: 20vh;
+  width: 10vw;
+}
+
+#clean-sponge {
+  position: absolute;
+  z-index: 1;
+  height: 20vh;
+  width: 8.7vw;
+  top: 59vh;
+  left: 60vw;
+}
+
+#bucket {
+  position: absolute;
+  height: 40vh;
+  width: 17vw;
+  top: 40vh;
+  left: 42vw;
+}
+
+#first-bucket-container,
+#second-bucket-container {
+  position: absolute;
+  background-color: transparent;
+}
+
+#first-bucket-container {
+  height: 25vh;
+  width: 11vw;
+  right: 34vw;
+  top: 53vh;
+}
+
+#second-bucket-container {
+  height: 40vh;
+  width: 70vw;
+  right: 11vw;
+  top: 14vh;
+}
+
+/* tenth page */
+
+#sock-flexbox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 40vh;
+  margin: auto;
+  justify-content: space-around;
+  top: 18vh;
+}
+
+.sock {
+  cursor: pointer;
+  background-color: white;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0.3vw;
+  box-shadow: 0 0 0 4px black;
+  width: 15vw;
+  height: 15vh;
+  border-radius: 2vw;
+  font-weight: 800;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page-ten-speech-bubble {
+  height: 19vh;
+  width: 20vw;
+  position: absolute;
+  top: 38.7vh;
+  right: 45vw;
+  display: none;
+}
+
+#lego {
+  height: 5vh;
+  width: 4vw;
+  position: absolute;
+  top: -2vh;
+  right: 35vw;
+  transform: rotate(-15deg);
+}
+
+#wifi {
+  height: 5vh;
+  width: 3vw;
+  position: absolute;
+  top: 34vh;
+  right: 16vw;
+  transform: rotate(-15deg);
+}
+
+/* eleveth page */
+
+#kelp-shake {
+  height: 50vh;
+  width: 30vw;
+  position: absolute;
+  top: 40vh;
+  right: 30vw;
+  z-index: -1;
+}
+
+/* twelfth page */
+
+#cool-spongebob {
+  position: absolute;
+  height: 50vh;
+  width: 18vw;
+  top: 27vh;
+  right: 37vw;
+}
+
+#page-twelve-speech-bubble,
+#page-thirteen-speech-bubble {
+  height: 17vh;
+  position: absolute;
+  top: 69.7vh;
+  right: 60vw;
+  width: 20vw;
+}
+
+/* thirteenth page */
+
+#mr-krab {
+  position: absolute;
+  height: 65vh;
+  width: 28vw;
+  right: 20vw;
+  top: 45vh;
+}
+
+/* fourteenth page */
+
+#hiding-plankton {
+  position: absolute;
+  height: 22vh;
+  width: 13vw;
+  top: 30vh;
+  right: 40.3vw;
+  z-index: -4;
+}
+
+#chimney {
+  position: absolute;
+  height: 16vh;
+  width: 7.9vw;
+  top: 37.75vh;
+  right: 42.3vw;
+  z-index: -2;
+}
+
+#hiding-plankton-background {
+  position: absolute;
+  height: 16vh;
+  width: 5.25vw;
+  top: 32.75vh;
+  right: 44.9vw;
+  z-index: -3;
+}
+
+#page-fourteen-speech-bubble {
+  height: 17vh;
+  position: absolute;
+  top: 72.7vh;
+  right: 64vw;
+  width: 20vw;
+  display: none;
+}
+
+/* fifteenth page */
+
+#target {
+  height: 30vh;
+  width: 15vw;
+  position: relative;
+  top: 20vh;
+  margin: auto;
+}
+
+/* sixteenth page */
+
+#plankton-run {
+  height: 16vh;
+  width: 5.25vw;
+  position: absolute;
+  top: 79vh;
+  right: 15vw;
+  cursor: url('assets/media/objects/cursor_target.png'), pointer;
+}
+
+.bullets {
+  position: absolute;
+  height: 8vh;
+  width: 7vw;
+  top: 8vh;
+}
+
+#bullet-1 {
+  right: 2vw;
+}
+
+#bullet-2 {
+  right: 5vw;
+}
+
+#bullet-3 {
+  right: 8vw;
+}
+
+/* seventeenth page */
+
+#poor-plankton {
+  position: absolute;
+  height: 60vh;
+  width: 30vw;
+  right: 15vw;
+  top: 27vh;
+  transform: scaleX(-1);
+}
+
+#miss-puff {
+  position: absolute;
+  height: 40vh;
+  width: 35vw;
+  right: 15vw;
+  transform: scaleX(-1);
+  top: 34vh;
+}
+
+#retry,
+#retry-2 {
+  top: 55vh;
+}
+
+#page-seventeen-speech-bubble,
+#page-seventeen-speech-bubble-2,
+#page-twenty-speech-bubble {
+  height: 19vh;
+  position: absolute;
+  top: 52vh;
+  right: 70vw;
+  width: 18vw;
+}
+
+/* eighteenth page */
+
+#balls {
+  position: absolute;
+  height: 30vh;
+  width: 35vw;
+  top: 43vh;
+  right: 27.5vw;
+}
+
+/* nineteenth page */
+
+#summing {
+  width: 83vw;
+  height: 20vh;
+  position: relative;
+  margin: auto;
+  top: 18vh;
+}
+
+#remember {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  top: 19vh;
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+/* twentieth page */
+
+#passed-out-patrick {
+  position: absolute;
+  height: 42vh;
+  width: 35vw;
+  top: 43vh;
+  right: 27.5vw;
+}
+
+#page-twenty-speech-bubble {
+  width: 20.5vw;
+  right: 68vw;
+}
+
+/* twenty first page */
+
+#environment-flexbox {
+  display: flex;
+  position: relative;
+  height: 40vh;
+  width: 70vw;
+  justify-content: space-between;
+  top: 17vh;
+  margin: auto;
+}
+
+.environments {
+  height: 30vh;
+  width: 22vw;
+  border-radius: 2vw;
+}
+
+#environment-text-flexbox {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 64vw;
+  top: 8.5vh;
+  margin: auto;
+}
+
+.environment-text {
+  font-size: 2vw;
+  font-weight: 800;
+  width: 15vw;
+}
+
+.twenty-first-speech-bubble {
+  height: 16.5vh;
+  width: 16vw;
+  position: absolute;
+  top: 67vh;
+  display: none;
+}
+
+#twenty-first-speech-bubble-0 {
+  right: 10vw;
+}
+
+#twenty-first-speech-bubble-1 {
+  right: 34vw;
+}
+
+#unconscious-patrick,
+#asleep-patrick {
+  position: absolute;
+  height: 21vh;
+  width: 18vw;
+}
+
+#unconscious-patrick {
+  left: 35vw;
+  top: 67vh;
+}
+
+/* twenty second page */
+
+#cards-flexbox {
+  position: relative;
+  margin: auto;
+  top: 12.9vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 65vh;
+  width: 45vw;
+}
+
+.cards {
+  box-shadow: 0 0 0 4px black;
+  width: 10vw;
+  height: 23vh;
+  border-radius: 2vw;
+  margin: 1vw;
+  z-index: 1;
+}
+
+#cards-text-flexbox {
+  position: absolute;
+  right: 25.4vw;
+  top: 48vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 60vh;
+  width: 39vw;
+  font-weight: 800;
+}
+
+.cards-text {
+  font-size: 2vw;
+  font-weight: 800;
+  width: 10vw;
+  margin: 1vw;
+}
+
+.twenty-second-speech-bubble {
+  height: 16.5vh;
+  width: 20vw;
+  position: absolute;
+  top: 67vh;
+  display: none;
+}
+
+#twenty-second-speech-bubble-0 {
+  top: 30vh;
+  right: 6vw;
+}
+
+#twenty-second-speech-bubble-2 {
+  top: 30vh;
+  right: 64vw;
+}
+
+#twenty-second-speech-bubble-3 {
+  top: 64vh;
+  right: 12vw;
+}
+
+/* twenty third page */
+
+#asleep-patrick {
+  left: 43vw;
+  top: 66.5vh;
+  z-index: -5;
+}
+
+#patricks-pants {
+  position: absolute;
+  height: 20vh;
+  width: 7vw;
+  top: 67.2vh;
+  left: 44vw;
+  z-index: 1;
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+#tool-box {
+  height: 20vh;
+  width: 20vw;
+  top: 32vh;
+  right: 52.9vw;
+}
+
+#draggable-iv {
+  position: absolute;
+  height: 15vh;
+  width: 8vw;
+  top: 34.5vh;
+  left: 20vw;
+  z-index: 1;
+}
+
+#draggable-bucket {
+  position: absolute;
+  height: 14vh;
+  width: 6vw;
+  top: 35vh;
+  left: 28vw;
+  z-index: 1;
+}
+
+#drop-patricks-pants {
+  top: 65vh;
+  right: 63vw;
+  height: 2vh;
+  padding-top: 3vh;
+  padding-bottom: 15vh;
+  z-index: -1;
+}
+
+#drop-bucket {
+  top: 32vh;
+  right: 26vw;
+  height: 2vh;
+  padding-top: 5.5vh;
+  padding-bottom: 12.5vh;
+  z-index: -2;
+}
+
+.twenty-third-speech-bubble {
+  height: 9vh;
+  width: 8vw;
+  top: 53.5vh;
+  display: none;
+}
+
+#twenty-third-speech-bubble-1 {
+  position: absolute;
+  right: 63vw;
+}
+
+#twenty-third-speech-bubble-2 {
+  position: absolute;
+  right: 54vw;
+}
+
+#hide-water-fall {
+  position: absolute;
+  background-color: rgb(243, 232, 196);
+  height: 32vh;
+  width: 10vw;
+  right: 25vw;
+  top: 0vh;
+  z-index: -1;
+}
+
+#water-fall {
+  position: absolute;
+  height: 40vh;
+  top: 0vh;
+  right: 28.5vw;
+  z-index: -5;
+}
+
+/* twenty fourth page */
+
+#awake-patrick {
+  right: 5vw;
+}
+
+#retry-test,
+#restart {
+  position: absolute;
+  display: block;
+  top: 43vh;
+  height: 20vh;
+  width: 26.5vw;
+}
+
+#retry-test {
+  right: 20vw;
+}
+
+#restart {
+  right: 46vw;
+}
